@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="box1 col-md-6 mt-5 rounded text-light">
+            <div class="row">
+                <h2 class="m-3">Welcome User</h2>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <input type="number" [(ngModel)]="amount" placeholder="Amount" class="col-md-3 m-3 input-group-text">
+                <select [(ngModel)]="fromCurrency" name="fromCurrency" class="col-md-3 m-3 input-group-text" placeholder="from">
+                    <option value="INR">INR</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                  </select>
+                <select [(ngModel)]="toCurrency" name="toCurrency" class="col-md-3 m-3 input-group-text" placeholder="to">
+                    <option value="INR">INR</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                  </select>
+            </div>
+            <div class="row ">
+                <div class="emptyDiv d-flex justify-content-center mt-3 mb-5">
+                    <h2>{{ amount }} {{ fromCurrency }} = {{ amount | currencyConverter:toCurrency:fromCurrency }} {{ toCurrency }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <input type="number" [(ngModel)]="amount">
+<select [(ngModel)]="fromCurrency" name="fromCurrency">
+  <option value="INR">INR</option>
+  <option value="USD">USD</option>
+  <option value="EUR">EUR</option>
+  <option value="GBP">GBP</option>
+</select>
+<select [(ngModel)]="toCurrency" name="toCurrency">
+  <option value="INR">INR</option>
+  <option value="USD">USD</option>
+  <option value="EUR">EUR</option>
+  <option value="GBP">GBP</option>
+</select>
+<p>{{ amount }} {{ fromCurrency }} = {{ amount | currencyConverter:toCurrency:fromCurrency }} {{ toCurrency }}</p> -->
